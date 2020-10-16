@@ -25,9 +25,12 @@ output/report.pdf: report/report.tex output/figure_1.png output/figure_2.png
 
 clean:
 	rm -rf IntroToMake
+	rm -rf output
+	rm -rf report
+	rm -rf data
+	rm -rf report
+	rm -rf scripts
 	rm -f movies.zip
 	rm -f *.csv
 	rm -f README.txt
 	rm -f LICENSE
-	rm -f output/report.pdf
-	rm -f output/figure_*.png
