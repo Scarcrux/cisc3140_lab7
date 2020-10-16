@@ -3,7 +3,7 @@
 .PHONY: all clean
 
 start:
-	pip install argparse matplotlib numpy pdflatex
+	pip install argparse matplotlib numpy
 	curl http://files.grouplens.org/datasets/movielens/ml-latest-small.zip --output movies.zip
 	unzip -j movies.zip
 	tail -n +2 ratings.csv > ratings2.csv
@@ -25,5 +25,9 @@ output/report.pdf: report/report.tex output/figure_1.png output/figure_2.png
 
 clean:
 	rm -rf IntroToMake
+	rm -f movies.zip
+	rm -f *.csv
+	rm -f README.txt
+	rm -f LICENSE
 	rm -f output/report.pdf
 	rm -f output/figure_*.png
